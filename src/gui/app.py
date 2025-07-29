@@ -4,6 +4,7 @@ import streamlit as st
 # Import each simulation module's entry point
 from wavelength_vs_temp_type2 import run as run_app1
 from pol_period_vs_temp import run as run_app2
+from wavelength_vs_temp_type0 import run as run_app3
 from spdc_emission_spectra_type2 import run as run_app4
 
 # ... add imports for app3, app4, etc.
@@ -31,8 +32,10 @@ sim_choice = st.selectbox(
     "Choose a simulation:",
     [
         "— Select —",
+       
         "Wavelength vs Temperature Type 2",  # maps to app1
-        "Poling Period vs Temperature",  # maps to app2
+        "Poling Period vs Temperature",# maps to app2
+         "Wavelength vs Temperature Type 0",#maps to app3
         "SPDC Emission Spectra for Type 0",
         "SPDC Emission Spectra for Type 2"
         # ... add labels for app3, app4, etc.
@@ -47,12 +50,16 @@ if sim_choice == "Wavelength vs Temperature Type 2":
 elif sim_choice == "Poling Period vs Temperature":
     # run the UI defined in app2.py
     run_app2()
-
+elif sim_choice == "Wavelength vs Temperature Type 0":
+    # run the UI defined in app3.py
+    run_app3()
 
 elif sim_choice == "SPDC Emission Spectra for Type 2":
     run_app4()
 
 else:
     # default message
+    st.info("Please select a simulation from the dropdown.")
+
     st.info("Please select a simulation from the dropdown.")
 

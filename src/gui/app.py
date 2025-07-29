@@ -35,7 +35,7 @@ sim_choice = st.selectbox(
        
         "Wavelength vs Temperature Type 2",  # maps to app1
         "Poling Period vs Temperature",# maps to app2
-         "Wavelength vs Temperature Type 0",#maps to app3
+        "Wavelength vs Temperature Type 0",#maps to app3
         "SPDC Emission Spectra for Type 0",
         "SPDC Emission Spectra for Type 2"
         # ... add labels for app3, app4, etc.
@@ -61,5 +61,4 @@ else:
     # default message
     st.info("Please select a simulation from the dropdown.")
 
-    st.info("Please select a simulation from the dropdown.")
 

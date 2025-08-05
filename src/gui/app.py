@@ -4,7 +4,7 @@ import streamlit as st
 # Import each simulation module's entry point
 from wavelength_vs_temp_type2 import run as run_app1
 from pol_period_vs_temp import run as run_app2
-from poling_pd_vs_temp_type0 import run as run_app5
+from poling_pd_vs_temp_type0 import run as run_app3
 from spdc_emission_spectra_type2 import run as run_app4
 
 # ... add imports for app3, app4, etc.
@@ -52,7 +52,7 @@ elif sim_choice == "Poling Period vs Temperature":
 
 elif sim_choice == "Poling Period vs Temperature Type 0":
     # run the UI defined in app2.py
-    run_app5()
+    run_app3()
 
 elif sim_choice == "SPDC Emission Spectra for Type 2":
     run_app4()
